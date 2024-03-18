@@ -49,8 +49,6 @@ fn bubble_sort(array: &mut [i32]){
 
 fn return_greatest(array: &[i32]) -> i32 {
     let mut greeter: i32 = array[0];
-    let mut test: Vec<i32> = Vec::new();
-    test.pu
     for i in 1..array.len(){
         if array[i - 1] >= greeter{
             greeter = array[i - 1];
