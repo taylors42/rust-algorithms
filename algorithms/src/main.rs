@@ -49,10 +49,34 @@ fn bubble_sort(array: &mut [i32]){
 
 fn return_greatest(array: &[i32]) -> i32 {
     let mut greeter: i32 = array[0];
+    let mut test: Vec<i32> = Vec::new();
+    test.pu
     for i in 1..array.len(){
         if array[i - 1] >= greeter{
             greeter = array[i - 1];
         }
     }
     greeter
+}
+
+fn is_prime(num: i32) {
+    if num % 2 == 0 || num == 2{
+        return println!(" é um primo");
+    }
+    let mut numbers_list: Vec<i32> = vec![];
+    for i in 1..=num{
+        numbers_list.push(i);
+    }
+    let mut attemps: i32 = 0;
+    for i in numbers_list{
+        if num % i == 0 {
+            attemps += 1;
+        }
+    }
+    if attemps >= 4{
+        println!(" não é um primo");
+    }
+    else if attemps == 2{
+        println!(" é um primo");
+    }
 }
